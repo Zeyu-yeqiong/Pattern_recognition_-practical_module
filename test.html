@@ -1,0 +1,168 @@
+
+<script src="static/js/apexcharts.js"></script>
+<html>
+    <head>
+        <title>ApexCharts测试样例</title>
+        <style>
+            #chart {
+            margin: 50 auto;
+          }
+        </style>
+    </head>
+    <body>
+        <div id="chart">
+        </div>
+    </body>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+</html>
+
+
+<script>
+var options = {
+    chart: {
+        height: 600,
+        type: "line",
+        stacked: true,
+        toolbar: {
+            show: true,
+            tools: { // 自定义是否启用图表右上角工具
+                reset: true,
+                download: false,
+                selection: false,
+                zoom: true,
+                zoomin: false,
+                zoomout: false,
+                pan: false,
+            }
+        },
+        animations: { // 设置图表数据加载动画
+            enabled: true,
+            easing: 'linear',
+            speed: 1000, // 动画加载速度
+            animateGradually: {
+                enabled: true,
+                delay: 300
+            },
+            dynamicAnimation: {
+                enabled: true,
+                speed: 500
+            }
+        },
+        background: '#FFFFFF',
+    },
+    subtitle:{
+        text:"人数",
+        offsetX:10,
+    },
+    title:{
+        text:"井下实时人员变化趋势",
+        align:"center",
+        style:{
+            fontSize:24, // 设置图表标题文字的大小
+        }
+    },
+    stroke: { 
+        show: true,
+        width: [5, 5,5],
+        curve: ['smooth','smooth','smooth'],
+    },
+    plotOptions: {
+        bar: { // 设置bar的样式
+            columnWidth: "80%",
+            horizontal:false,
+            endingShape:"flat",
+            distributed:false,
+        }
+    },
+    colors: ["#EEAD0E", "#63B8FF", "#000000"], // 设置柱状图和折线的颜色，这里是按照series里的顺序设置
+    series: [
+        {
+            name: "入井",
+            type: "column",
+            data: [100, 41, 22, 37, 93, 22, 37, 21, 44, 122, 20,100, 41, 22, 37, 93, 22, 37, 21, 44, 122, 20]
+        },
+        {
+            name: "升井",
+            type: "column",
+            data: [-44, -95, -41, -87, -22, -43, -50, -91, -56, -27, -43,-44, -95, -41, -87, -22, -43, -50, -91, -56, -27, -43]
+        },
+        {
+            name: "井下总人数",
+            type: "line",
+            data: [190, 241, 122, 237, 293, 122, 137, 291, 244, 222, 220,190, 241, 122, 237, 293, 122, 137, 291, 244, 222, 220]
+        },
+    ],
+    // X轴的数据
+    labels: [ 
+    		  "01-01-2003", "02-01-2003","2003-03-01 16:22:30","2003-04-01 16:22:30",
+    		  "05-01-2003","06-01-2003","07-01-2003","08-01-2003","09-01-2003","10-01-2003",
+        	  "11-01-2003","12-01-2003","01-01-2004","2004-02-01 16:22:30","2004-03-01 16:22:30",
+        	  "04-01-2004","05-01-2004","06-01-2004","07-01-2004","08-01-2004","9-01-2004","10-01-2004"
+        	],
+    markers: {
+        size: 5, // 折线图每个点的大小
+    },
+    xaxis: {
+        type: "datetime", // X轴的类型
+        dateTimeFomatter: {},
+        labels: { // X轴的格式
+            format: "yyyy-MM-dd",
+        }
+    },
+    yaxis: [
+        {
+            labels: {
+                rotate: -60,
+                formatter: function (y) {
+                    if (y.toFixed(0) < 0) {
+                        return -y.toFixed(0) + "人";
+                    } else {
+                        return y.toFixed(0) + "人";
+                    }
+
+                }
+            },
+            tooltip: {
+                enabled: true
+            }
+        },
+    ],
+    tooltip: {
+        //enabled:false,
+        shared: true,
+        intersect: false,
+        x: {
+            format: "yyyy-MM-dd"
+        },
+        y: [
+            {
+                formatter: function (y) {
+                    if (typeof y !== "undefined") {
+                        if (y.toFixed(0) < 0) {
+                            return -y.toFixed(0) + "人";
+                        } else {
+                            return y.toFixed(0) + "人";
+                        }
+                    }
+                    return y;
+                }
+            },
+            {
+                formatter: function (y) {
+                    if (typeof y !== "undefined") {
+                        if (y.toFixed(0) < 0) {
+                            return -y.toFixed(0) + "人";
+                        } else {
+                            return y.toFixed(0) + "人";
+                        }
+                    }
+                    return y;
+                }
+            }
+        ]
+    }
+};
+var chart = new ApexCharts(document.querySelector("#chart"), options);
+chart.render();
+
+</script>

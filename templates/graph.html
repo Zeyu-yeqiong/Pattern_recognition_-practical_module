@@ -1,0 +1,692 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="">
+<!--<![endif]-->
+
+<head>
+<meta charset="utf-8">
+<meta name="description" content="">
+<meta name="author" content="webthemez.com">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Home</title>
+<script src="static/js/apexcharts.js"></script>
+<link rel="stylesheet" href="static/css/bootstrap.min.css">
+<link rel="stylesheet" href="static/css/flexslider.css">
+<link rel="stylesheet" href="static/css/jquery.fancybox.css">
+<link rel="stylesheet" href="static/css/main.css">
+<link rel="stylesheet" href="static/css/responsive.css">
+<link rel="stylesheet" href="static/css/font-icon.css">
+<link rel="stylesheet" href="static/css/animate.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/static/css/font-awesome.min.css">
+
+<style>
+
+  #wrapper {
+    padding-top: 20px;
+    background: #000524;
+    border: 1px solid #000;
+    box-shadow: 0 22px 35px -16px rgba(0, 0, 0, 0.71);
+    max-width: 1400px;
+    margin: 35px auto;
+  }
+  
+  #chart-bar {
+    position: relative;
+    margin-top: -38px;
+  }
+  </style>
+<style type="text/css">
+
+
+
+ 
+  /* SELECT W/IMAGE */
+  select#selectTravelCity
+  {
+     width                    : 14em;
+     height                   : 3.2em;
+     padding                  : 0.2em 0.4em 0.2em 0.4em;
+     vertical-align           : middle;
+     border                   : 1px solid #94c1e7;
+     -moz-border-radius       : 0.2em;
+     -webkit-border-radius    : 0.2em;
+     border-radius            : 0.2em;
+     -webkit-appearance       : none;
+     -moz-appearance          : none;
+     appearance               : none;
+     background               : #ffffff;
+     font-family              : SimHei;
+     font-size                : 1.1em;
+     color                    : RGBA(102,102,102,0.7);
+     cursor                   : pointer;
+  }
+
+  /*SELECT W/DOWN-ARROW*/
+  select#selectPointOfInterest
+  {
+     width                    : 123pt;
+     height                   : 21pt;
+     text-indent              : 4pt;
+     text-align               : left;
+     vertical-align           : middle;
+     border                   : 1px solid #94c1e7;
+  }
+
+
+  /*LABEL FOR SELECT*/
+  label#lblSelect{ position: relative; display: inline-block;}
+
+
+  /*DOWNWARD ARROW (25bc)*/
+  label#lblSelect::after
+  {
+      content                 : "\25bc";
+      position                : absolute;
+      top                     : 0;
+      right                   : 0;
+      bottom                  : 0;
+      width                   : 20pt;
+      line-height             : 40pt;
+      vertical-align          : middle;
+      text-align              : center;
+      background              : #94c1e7;
+      color                   : #2984ce;
+     -moz-border-radius       : 0 6px 6px 0;
+     -webkit-border-radius    : 0 6px 6px 0;
+      border-radius           : 0 6px 6px 0;
+      pointer-events          : none;
+  }
+</style>
+
+
+</head>
+
+<body>
+<!-- header section -->
+<section class="banner" role="banner">
+  <header id="header">
+    <div class="header-content clearfix"> <span class="logo"><a href="index.html">D&C Clinic</a></span>
+      <nav class="navigation" role="navigation">
+        <ul class="primary-nav">
+          <li><a href="#intro">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#package">Appointment</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#teams">Doctors</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="#" class="nav-toggle">Menu<span></span></a> </div>
+  </header>
+  <!-- banner text -->
+  <div class="container">
+      <div class="banner-text text-center">
+        <h1>Pulmonary Fibrosis Diagnosis</h1>
+        <p>Accurate Predictions From A CT scan<br/> </p></div>
+      </br></br></br></br>
+      <!-- banner text --> 
+  </div>
+</section>
+<!-- header section --> 
+<!-- intro section -->
+<section id="intro" class="section intro">
+  <div class="container">
+    <form action="" enctype='multipart/form-data' method='POST'></form>
+    <div class="col-md-8 col-md-offset-2 text-center">
+      <h3>We will give you the most accurate prognosis based on your information and CT scan</h3>
+
+
+      <h4 style="color:white">Your Age : {{age}}     </h4>
+      <h4 style="color:white">Gender : {{gender}}     </h4>
+      <h4 style="color:white">Smoking Status : {{smoking_status}}     </h4>
+        </br>
+      <h4 style="color:white">{{mess}}     </h4>
+      <h4 style="color:white">{{advice}}     </h4>
+
+
+        
+      
+      
+    <form action="" enctype='multipart/form-data' method='POST'>
+
+
+
+      <a  href = "/index" class="btn btn-large">BACK</a >
+        <!-- <a href="#package" class="btn btn-large">Appointment</a>  -->
+      
+      </div>
+    </form>
+    </div>
+
+  
+ 
+    </div>
+    
+</form>
+</div>
+
+  <!-- <div class="container">
+    <div class="col-md-8 col-md-offset-2 text-center">
+      <h3>Dogs and Cats Veterinary Services</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu libero scelerisque ligula sagittis faucibus eget quis lacus.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> 
+        <a href="#package" class="btn btn-large">Appointment</a> 
+    </div>
+  </div> -->
+  
+  <div id="wrapper">
+    <div id="chart-area">
+  
+    </div>
+    <div id="chart-bar">
+  
+    </div>
+  </div>
+
+</section>
+<!-- intro section --> 
+<!-- services section -->
+<section id="services" class="services service-section">
+  <div class="container">
+  <div class="section-header">
+                <h2 class="wow fadeInDown animated">Our Services</h2>
+                <p class="wow fadeInDown animated">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa <br> semper aliquam quis mattis quam.</p>
+            </div>
+    <div class="row">
+      <div class="col-md-4 col-sm-6 services text-center"> <span class="icon icon-strategy"></span>
+        <div class="services-content">
+          <h5>Cardiology</h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu libero scelerisque ligula sagittis faucibus eget quis lacus.</p>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 services text-center"> <span class="icon icon-briefcase"></span>
+        <div class="services-content">
+          <h5>Radiology</h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu libero scelerisque ligula sagittis faucibus eget quis lacus.</p>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 services text-center"> <span class="icon icon-tools"></span>
+        <div class="services-content">
+          <h5>Anesthesia</h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu libero scelerisque ligula sagittis faucibus eget quis lacus.</p>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 services text-center"> <span class="icon icon-genius"></span>
+        <div class="services-content">
+          <h5>Ultrasound</h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu libero scelerisque ligula sagittis faucibus eget quis lacus.</p>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 services text-center"> <span class="icon icon-megaphone"></span>
+        <div class="services-content">
+          <h5>Emergency</h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu libero scelerisque ligula sagittis faucibus eget quis lacus.</p>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 services text-center"> <span class="icon icon-trophy"></span>
+        <div class="services-content">
+          <h5>Neurology</h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu libero scelerisque ligula sagittis faucibus eget quis lacus.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- services section --> 
+<!-- package section -->
+<section id="package" class="packageList">
+  <div class="container">
+      <div class="section-header">
+                <h2 class="wow fadeInDown animated">Hospital Hours</h2>
+                <p class="wow fadeInDown animated">Please call us to schedule your pets appointment today!</p>
+            </div>
+    <div class="row">  
+            <div class="col-md-6">
+            
+            	<div class="package wow fadeInLeft animated" data-wow-offset="250" data-wow-delay="200ms">
+                	<h5>Monday</h5>
+                    <ul class="list-default">
+                    	<li>Dr. Randon</li>
+                    	<li>adipiscing eliteger gravida velit quis dolo</li>
+                    	<li>Timing - 7:00 am	7:00 pm</li>
+                    </ul>
+                    <strong class="price"><small>Fee</small> $38</strong>
+                </div><!-- end package -->
+                
+                <div class="package wow fadeInLeft animated" data-wow-offset="200" data-wow-delay="300m">
+                	<h5>Tuesday</h5>
+                    <ul class="list-default">
+                    	<li>Dr. Marcus</li>
+                    	<li>adipiscing eliteger gravida velit quis dolo</li>
+                    	<li>Timing - 7:00 am	7:00 pm</li>
+                    </ul>
+                    <strong class="price"><small>Fee</small> $75</strong>
+                </div><!-- end package -->
+                
+                <div class="package no-border wow fadeInLeft animated" data-wow-offset="150" data-wow-delay="400m" >
+                	<h5>Wednesday</h5>
+                    <ul class="list-default">
+                    	<li>Dr. Granton</li>
+                    	<li>adipiscing eliteger gravida velit quis dolo</li>
+                    	<li>Timing - 7:00 am	7:00 pm</li>
+                    </ul>
+                    <strong class="price"><small>Fee</small> $46</strong>
+                </div><!-- end package -->
+                
+            </div><!-- end col-md-6 -->
+            <div class="col-md-6">
+            
+            	<div class="package wow fadeInRight animated" data-wow-offset="250" data-wow-delay="500m" >
+                	<h5>Thursday</h5>
+                    <ul class="list-default">
+                    	<li>Dr. Michel Cube</li>
+                    	<li>adipiscing eliteger gravida velit quis dolo</li>
+                    	<li>Timing - 7:00 am	7:00 pm</li>
+                    </ul>
+                    <strong class="price"><small>Fee</small> $15</strong>
+                </div><!-- end package -->
+                
+                <div class="package wow fadeInRight animated" data-wow-offset="200" data-wow-delay="600m">
+                	<h5>Friday</h5>
+                    <ul class="list-default">
+                    	<li>Dr. Jonh Dow</li>
+                    	<li>adipiscing eliteger gravida velit quis dolo</li>
+                    	<li>Timing - 7:00 am	7:00 pm</li>
+                    </ul>
+                    <strong class="price"><small>Fee</small> $84</strong>
+                </div><!-- end package -->
+                
+                <div class="package no-border wow fadeInRight animated" data-wow-offset="150" data-wow-delay="700m">
+                	<h5>Saturday</h5>
+                    <ul class="list-default">
+                    	<li>Dr. Kristean</li>
+                    	<li>adipiscing eliteger gravida velit quis dolo</li>
+                    	<li>Timing - 7:00 am	7:00 pm</li>
+                    </ul>
+                    <strong class="price"><small>Fee</small> $95</strong>
+                </div><!-- end package -->
+                
+            </div><!-- end col-md-6 -->
+        </div><!-- end row -->    
+  </div>
+</section>
+<!-- package section --> 
+
+<!-- gallery section -->
+<section id="gallery" class="gallery section">
+  <div class="container">
+    <div class="section-header">
+                <h2 class="wow fadeInDown animated">Gallery</h2>
+                <p class="wow fadeInDown animated">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa <br> semper aliquam quis mattis quam.</p>
+            </div>
+    <div class="row no-gutter">
+      <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="static/images/portfolio/01.jpg" class="work-box"> <img src="static/images/portfolio/01.jpg" alt="">
+        <div class="overlay">
+          <div class="overlay-caption">
+             <p><span class="icon icon-magnifying-glass"></span></p>
+          </div>
+        </div>
+        <!-- overlay --> 
+        </a> </div>
+      <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="static/images/portfolio/02.jpg" class="work-box"> <img src="static/images/portfolio/02.jpg" alt="">
+        <div class="overlay">
+          <div class="overlay-caption">
+            <p><span class="icon icon-magnifying-glass"></span></p>
+          </div>
+        </div>
+        <!-- overlay --> 
+        </a> </div>
+      <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="static/images/portfolio/03.jpg" class="work-box"> <img src="static/images/portfolio/03.jpg" alt="">
+        <div class="overlay">
+          <div class="overlay-caption">
+            <p><span class="icon icon-magnifying-glass"></span></p>
+          </div>
+        </div>
+        <!-- overlay --> 
+        </a> </div>
+      <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="static/images/portfolio/04.jpg" class="work-box"> <img src="static/images/portfolio/04.jpg" alt="">
+        <div class="overlay">
+          <div class="overlay-caption"> 
+            <p><span class="icon icon-magnifying-glass"></span></p>
+          </div>
+        </div>
+        <!-- overlay --> 
+        </a> </div>
+      <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="static/images/portfolio/05.jpg" class="work-box"> <img src="static/images/portfolio/05.jpg" alt="">
+        <div class="overlay">
+          <div class="overlay-caption">
+            <p><span class="icon icon-magnifying-glass"></span></p>
+          </div>
+        </div>
+        <!-- overlay --> 
+        </a> </div>
+      <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="static/images/portfolio/06.jpg" class="work-box"> <img src="static/images/portfolio/06.jpg" alt="">
+        <div class="overlay">
+          <div class="overlay-caption">
+            <p><span class="icon icon-magnifying-glass"></span></p>
+          </div>
+        </div>
+        <!-- overlay --> 
+        </a> </div>
+      <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="static/images/portfolio/07.jpg" class="work-box"> <img src="static/images/portfolio/07.jpg" alt="">
+        <div class="overlay">
+          <div class="overlay-caption">
+            <p><span class="icon icon-magnifying-glass"></span></p>
+          </div>
+        </div>
+        <!-- overlay --> 
+        </a> </div>
+      <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="static/images/portfolio/08.jpg" class="work-box"> <img src="static/images/portfolio/08.jpg" alt="">
+        <div class="overlay">
+          <div class="overlay-caption">
+             <p><span class="icon icon-magnifying-glass"></span></p>
+          </div>
+        </div>
+        <!-- overlay --> 
+        </a> </div>
+    </div>
+  </div>
+</section>
+<!-- gallery section --> 
+<!-- our team section -->
+<section id="teams" class="section teams">
+  <div class="container">
+      <div class="section-header">
+                <h2 class="wow fadeInDown animated">Doctors</h2>
+                <p class="wow fadeInDown animated">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa <br> semper aliquam quis mattis quam.</p>
+            </div>
+    <div class="row">
+      <div class="col-md-3 col-sm-6">
+        <div class="person"><img src="static/images/team-1.jpg" alt="" class="img-responsive">
+          <div class="person-content">
+            <h4>Dr. Jonh Dow</h4>
+            <h5 class="role">Founder</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit eget risus vitae massa.</p>
+          </div>
+          <ul class="social-icons clearfix">
+            <li><a href="#"><span class="fa fa-facebook"></span></a></li>
+            <li><a href="#"><span class="fa fa-twitter"></span></a></li> 
+            <li><a href="#"><span class="fa fa-google-plus"></span></a></li> 
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="person"> <img src="static/images/team-2.jpg" alt="" class="img-responsive">
+          <div class="person-content">
+            <h4>Dr. Markus Linn</h4>
+            <h5 class="role">Master</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit eget risus vitae massa.</p>
+          </div>
+          <ul class="social-icons clearfix">
+            <li><a href="#" class=""><span class="fa fa-facebook"></span></a></li>
+            <li><a href="#" class=""><span class="fa fa-twitter"></span></a></li> 
+            <li><a href="#" class=""><span class="fa fa-google-plus"></span></a></li> 
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="person"> <img src="static/images/team-3.jpg" alt="" class="img-responsive">
+          <div class="person-content">
+            <h4>Dr. Chris Jemes</h4>
+            <h5 class="role">Aerobic</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit eget risus vitae massa.</p>
+          </div>
+          <ul class="social-icons clearfix">
+            <li><a href="#" class=""><span class="fa fa-facebook"></span></a></li>
+            <li><a href="#" class=""><span class="fa fa-twitter"></span></a></li> 
+            <li><a href="#" class=""><span class="fa fa-google-plus"></span></a></li> 
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="person"> <img src="static/images/team-4.jpg" alt="" class="img-responsive">
+          <div class="person-content">
+            <h4>Dr. Vintes Mars</h4>
+            <h5 class="role">Marketing</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit eget risus vitae massa.</p>
+          </div>
+          <ul class="social-icons clearfix">
+            <li><a href="#" class=""><span class="fa fa-facebook"></span></a></li>
+            <li><a href="#" class=""><span class="fa fa-twitter"></span></a></li> 
+            <li><a href="#" class=""><span class="fa fa-google-plus"></span></a></li> 
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- our team section --> 
+<!-- Testimonials section -->
+<section id="testimonials" class="section testimonials no-padding">
+  <div class="container-fluid">
+    <div class="row no-gutter">
+      <div class="flexslider">
+        <ul class="slides">
+          <li>
+            <div class="col-md-12">
+              <blockquote>
+                <h1>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa 
+semper aliquam quis mattis consectetur adipiscing elit.." </h1>
+                <p>Chris Mentsl</p>
+              </blockquote>
+            </div>
+          </li>
+          <li>
+            <div class="col-md-12">
+              <blockquote>
+                <h1>"Praesent eget risus vitae massa Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa 
+semper aliquam quis mattis consectetur adipiscing elit.." </h1>
+                <p>Kristean velnly</p>
+              </blockquote>
+            </div>
+          </li>
+          <li>
+            <div class="col-md-12">
+              <blockquote>
+                <h1>"Consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa 
+semper aliquam quis mattis consectetur adipiscing elit.." </h1>
+                <p>Markus Denny</p>
+              </blockquote>
+            </div>
+          </li>
+          <li>
+            <div class="col-md-12">
+              <blockquote>
+                <h1>"Vitae massa semper aliquam Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa 
+semper aliquam quis mattis consectetur adipiscing elit.." </h1>
+                <p>John Doe</p>
+              </blockquote>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Testimonials section --> 
+
+<!-- contact section -->
+<section id="contact" class="section">
+  <div class="container">
+      <div class="section-header">
+                <h2 class="wow fadeInDown animated">Contact Us</h2>
+                <p class="wow fadeInDown animated">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa <br> semper aliquam quis mattis quam.</p>
+            </div>
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2 conForm">       
+        <div id="message"></div>
+        <form method="post" action="php/contact.php" name="cform" id="cform">
+          <input name="name" id="name" type="text" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" placeholder="Your name..." >
+          <input name="email" id="email" type="email" class=" col-xs-12 col-sm-12 col-md-12 col-lg-12 noMarr" placeholder="Email Address..." >
+          <textarea name="comments" id="comments" cols="" rows="" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" placeholder="Message..."></textarea>
+          <input type="submit" id="submit" name="send" class="submitBnt" value="Send">
+          <div id="simple-msg"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- contact section --> 
+<!-- JS FILES --> 
+
+
+
+
+
+<script>
+var data = generateDayWiseTimeSeries(new Date("22 Apr 2017").getTime(), 115, {
+  min: 30,
+  max: 90
+});
+var options1 = {
+  chart: {
+    id: "chart2",
+    type: "area",
+    height: 230,
+    foreColor: "#ccc",
+    toolbar: {
+      autoSelected: "pan",
+      show: false
+    }
+  },
+  colors: ["#00BAEC"],
+  stroke: {
+    width: 3
+  },
+  grid: {
+    borderColor: "#555",
+    yaxis: {
+      lines: {
+        show: false
+      }
+    }
+  },
+  dataLabels: {
+    enabled: false
+  },
+  fill: {
+    gradient: {
+      enabled: true,
+      opacityFrom: 0.55,
+      opacityTo: 0
+    }
+  },
+  markers: {
+    size: 5,
+    colors: ["#000524"],
+    strokeColor: "#00BAEC",
+    strokeWidth: 3
+  },
+  series: [
+    {
+      name: "week",
+      data: data
+    }
+  ],
+  tooltip: {
+    theme: "dark"
+  },
+  // xaxis: {
+  //   type: "datetime"
+  // },
+  yaxis: {
+    min: {{min_y}},
+    tickAmount: 4
+  },
+  labels:[
+  "week -10","week -8","week -4","week -2","week 0","week 2","week 4","week 6","week 8",
+  "week 10","week 12","week 14","week 16","week 18","week 20","week 22","week 24","week 26",
+  "week 28","week 30","week 32","week 34",
+  "week 36","week 38","week 40"],
+
+
+  
+};
+
+var chart1 = new ApexCharts(document.querySelector("#chart-area"), options1);
+
+chart1.render();
+
+var options2 = {
+  chart: {
+    id: "chart1",
+    height: 130,
+    type: "bar",
+    foreColor: "#ccc",
+    brush: {
+      target: "chart2",
+      enabled: true
+    },
+    selection: {
+      fill: {
+        color: "#fff",
+        opacity: 0.4
+      },
+      xaxis: {
+        // min: new Date("27 Jul 2017 10:00:00").getTime(),
+        // max: new Date("14 Aug 2017 10:00:00").getTime()
+       
+      }
+    }
+  },
+  colors: ["#FF0080"],
+  series: [
+    {
+      data: data
+    }
+  ],
+  stroke: {
+    width: 2
+  },
+  grid: {
+    borderColor: "#444"
+  },
+  markers: {
+    size: 0
+  },
+  xaxis: {
+    type: "datetime",
+    tooltip: {
+      enabled: false
+    }
+  },
+  yaxis: {
+    min: {{min_y}},
+    tickAmount: 2
+  },
+  label:["week -10","week 0","week 10","week 20","week 30","week 40","week 50","week 60","week 70","week 80","week 90","week 100"],
+};
+
+var chart2 = new ApexCharts(document.querySelector("#chart-bar"), options2);
+
+chart2.render();
+
+function generateDayWiseTimeSeries(baseval, count, yrange) {
+  var i = 0;
+  var series = {{series}};
+  // while (i < count) {
+  //   var x = baseval;
+  //   var y =
+  //     Math.floor(Math.random() * (yrange.max - yrange.min + 1)) + yrange.min;
+
+  //   series.push([x, y]);
+  //   baseval += 86400000;
+  //   i++;
+  // }
+  return series;
+}
+</script>
+
+<script src="static/js/jquery.min.js"></script> 
+<script src="static/js/bootstrap.min.js"></script> 
+<script src="static/js/jquery.flexslider-min.js"></script> 
+<script src="static/js/jquery.fancybox.pack.js"></script> 
+<script src="static/js/retina.min.js"></script> 
+<script src="static/js/modernizr.js"></script> 
+<script src="static/js/main.js"></script> 
+<script type="text/javascript" src="static/js/jquery.contact.js"></script> 
+</body>
+</html>

@@ -1,0 +1,678 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="">
+<!--<![endif]-->
+
+<head>
+<meta charset="utf-8">
+<meta name="description" content="">
+<meta name="author" content="webthemez.com">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Home</title>
+<link rel="stylesheet" href="static/css/bootstrap.min.css">
+<link rel="stylesheet" href="static/css/flexslider.css">
+<link rel="stylesheet" href="static/css/jquery.fancybox.css">
+<link rel="stylesheet" href="static/css/main.css">
+<link rel="stylesheet" href="static/css/responsive.css">
+<link rel="stylesheet" href="static/css/font-icon.css">
+<link rel="stylesheet" href="static/css/animate.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/static/css/font-awesome.min.css">
+
+<style type="text/css">
+ 
+  /* SELECT W/IMAGE */
+  select#selectTravelCity
+  {
+     width                    : 14em;
+     height                   : 3.2em;
+     padding                  : 0.2em 0.4em 0.2em 0.4em;
+     vertical-align           : middle;
+     border                   : 1px solid #94c1e7;
+     -moz-border-radius       : 0.2em;
+     -webkit-border-radius    : 0.2em;
+     border-radius            : 0.2em;
+     -webkit-appearance       : none;
+     -moz-appearance          : none;
+     appearance               : none;
+     background               : #ffffff;
+     font-family              : SimHei;
+     font-size                : 1.1em;
+     color                    : RGBA(102,102,102,0.7);
+     cursor                   : pointer;
+  }
+
+  /*SELECT W/DOWN-ARROW*/
+  select#selectPointOfInterest
+  {
+     width                    : 123pt;
+     height                   : 21pt;
+     text-indent              : 4pt;
+     text-align               : left;
+     vertical-align           : middle;
+     border                   : 1px solid #94c1e7;
+  }
+
+
+  /*LABEL FOR SELECT*/
+  label#lblSelect{ position: relative; display: inline-block;}
+
+
+  /*DOWNWARD ARROW (25bc)*/
+  label#lblSelect::after
+  {
+      content                 : "\25bc";
+      position                : absolute;
+      top                     : 0;
+      right                   : 0;
+      bottom                  : 0;
+      width                   : 20pt;
+      line-height             : 40pt;
+      vertical-align          : middle;
+      text-align              : center;
+      background              : #94c1e7;
+      color                   : #2984ce;
+     -moz-border-radius       : 0 6px 6px 0;
+     -webkit-border-radius    : 0 6px 6px 0;
+      border-radius           : 0 6px 6px 0;
+      pointer-events          : none;
+  }
+</style>
+
+
+</head>
+
+<body>
+<!-- header section -->
+<section class="banner" role="banner">
+  <header id="header">
+    <div class="header-content clearfix"> <span class="logo"><a href="index"> NUS-ISS  Group9</a></span>
+      <nav class="navigation" role="navigation">
+        <ul class="primary-nav">
+          <li><a href="#intro">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#package">Appointment</a></li>
+          <li><a href="#teams">Doctors</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="#" class="nav-toggle">Menu<span></span></a> </div>
+  </header>
+  <!-- banner text -->
+  <div class="container">
+      <div class="banner-text text-center">
+        <h1>Pulmonary Fibrosis Diagnosis</h1>
+        <p>Accurate Predictions From A CT scan<br/> </p></div>
+      </br></br></br></br>
+      <!-- banner text --> 
+  </div>
+</section>
+<!-- header section --> 
+<!-- intro section -->
+
+<section id="intro" class="section intro">
+
+  <div class="container">
+    <form action="" enctype='multipart/form-data' method='POST'></form>
+    <div class="col-md-8 col-md-offset-2 text-center">
+      <h3>We will give you the most accurate prognosis based on your information and CT scan</h3>
+      <div id="sys-loading" class=""><div class="spinner">
+
+
+        <div class="loader-inner line-scale-pulse-out-rapid">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        </div></div>
+    
+        
+      
+      
+    <form action="" enctype='multipart/form-data' method='POST'>
+      <table align="center">
+        <tr>
+        <td><h4 style="color:white">Gender:</h4></td>
+        <td>
+          <select id="selectPointOfInterest" name='gender'>
+          <option value ="male" style="color:black">Male </option>
+          <option value ="female" style="color:black">Female</option>
+          </select>
+        </td>
+        </tr>
+        
+        <tr>
+        <td><h4 style="color:white" >Smoking Status:</h4></td>
+        <td><select id="selectPointOfInterest" name='smoking_status'>
+          <option value ="Ex-smoker">Ex-smoker</option>
+          <option value ="Currently smokes">Currently smokes</option>
+          <option value ="Never smoked">Never smoked</option>
+        </select>
+        </td>
+        </tr>
+        
+        <tr>
+        <td><h4 style="color:white" name='age'>Age :</h4></td>
+        <td><input type="text" name="age" oninput ="value=value.replace(/[^\d]/g,'')"></td>
+        </tr>
+        
+        <tr>
+        <td><h4 style="color:white" name='FVC'> FVC (forced vital capacity):</h4></td>
+        <td><input type="text" name="fvc" placeholder="suggest value: 1500-3000" oninput ="value=value.replace(/[^\d]/g,'')"></td>
+        </tr>
+        
+        <tr>
+        <td><h4 style="color:white" name='week'>FVC test week:</h4></td>
+        <td><input type="text" name="week" placeholder="suggest value: 0-40" oninput ="value=value.replace(/[^\d]/g,'')"></td>
+        </tr>
+
+
+        <tr>
+          <td><h4 style="color:white" name='week'>CT SCAN UPLOAD</h4><input type="file" name="file" multiple="multiple" accept=".dcm"/>
+          <td><h4 style="color:rgb(182, 19, 19)" name='week'>NOTE:CT scan file is optional,if you don't submit any file,we will use our default CT scan, which is more easy for demo
+            .<br/><br/>We have prepared 5 patients CT scan in "root_directory/osic-pulmonary-fibrosis-progression/test/",please upload at lease 5 dcm file</h4></td>
+          </tr>
+        </table>
+      </br>
+
+      <div id="loading" style="display:none;opacity:1" align="center">
+        <img src="static/images/loading2.gif" width="100" height="100"/>
+      </div>
+      
+      
+      <input type="submit" value="Predicte Me" class="btn btn-large" onclick="document.getElementById('loading').style.display='';" />
+    </div>
+  </form>
+
+ 
+    </div>
+
+
+
+
+
+  
+</form>
+</div>
+
+  <!-- <div class="container">
+    <div class="col-md-8 col-md-offset-2 text-center">
+      <h3>Dogs and Cats Veterinary Services</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu libero scelerisque ligula sagittis faucibus eget quis lacus.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> 
+        <a href="#package" class="btn btn-large">Appointment</a> 
+    </div>
+  </div> -->
+
+
+
+</section>
+<!-- intro section --> 
+<!-- services section -->
+<section id="services" class="services service-section">
+  <div class="container">
+  <div class="section-header">
+                <h2 class="wow fadeInDown animated">Our Services</h2>
+                <p class="wow fadeInDown animated">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa <br> semper aliquam quis mattis quam.</p>
+            </div>
+    <div class="row">
+      <div class="col-md-4 col-sm-6 services text-center"> <span class="icon icon-strategy"></span>
+        <div class="services-content">
+          <h5>Cardiology</h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu libero scelerisque ligula sagittis faucibus eget quis lacus.</p>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 services text-center"> <span class="icon icon-briefcase"></span>
+        <div class="services-content">
+          <h5>Radiology</h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu libero scelerisque ligula sagittis faucibus eget quis lacus.</p>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 services text-center"> <span class="icon icon-tools"></span>
+        <div class="services-content">
+          <h5>Anesthesia</h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu libero scelerisque ligula sagittis faucibus eget quis lacus.</p>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 services text-center"> <span class="icon icon-genius"></span>
+        <div class="services-content">
+          <h5>Ultrasound</h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu libero scelerisque ligula sagittis faucibus eget quis lacus.</p>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 services text-center"> <span class="icon icon-megaphone"></span>
+        <div class="services-content">
+          <h5>Emergency</h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu libero scelerisque ligula sagittis faucibus eget quis lacus.</p>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 services text-center"> <span class="icon icon-trophy"></span>
+        <div class="services-content">
+          <h5>Neurology</h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu libero scelerisque ligula sagittis faucibus eget quis lacus.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- services section --> 
+<!-- package section -->
+<section id="package" class="packageList">
+  <div class="container">
+      <div class="section-header">
+                <h2 class="wow fadeInDown animated">Hospital Hours</h2>
+                <p class="wow fadeInDown animated">Please call us to schedule your pets appointment today!</p>
+            </div>
+    <div class="row">  
+            <div class="col-md-6">
+            
+            	<div class="package wow fadeInLeft animated" data-wow-offset="250" data-wow-delay="200ms">
+                	<h5>Monday</h5>
+                    <ul class="list-default">
+                    	<li>Dr. Randon</li>
+                    	<li>adipiscing eliteger gravida velit quis dolo</li>
+                    	<li>Timing - 7:00 am	7:00 pm</li>
+                    </ul>
+                    <strong class="price"><small>Fee</small> $38</strong>
+                </div><!-- end package -->
+                
+                <div class="package wow fadeInLeft animated" data-wow-offset="200" data-wow-delay="300m">
+                	<h5>Tuesday</h5>
+                    <ul class="list-default">
+                    	<li>Dr. Marcus</li>
+                    	<li>adipiscing eliteger gravida velit quis dolo</li>
+                    	<li>Timing - 7:00 am	7:00 pm</li>
+                    </ul>
+                    <strong class="price"><small>Fee</small> $75</strong>
+                </div><!-- end package -->
+                
+                <div class="package no-border wow fadeInLeft animated" data-wow-offset="150" data-wow-delay="400m" >
+                	<h5>Wednesday</h5>
+                    <ul class="list-default">
+                    	<li>Dr. Granton</li>
+                    	<li>adipiscing eliteger gravida velit quis dolo</li>
+                    	<li>Timing - 7:00 am	7:00 pm</li>
+                    </ul>
+                    <strong class="price"><small>Fee</small> $46</strong>
+                </div><!-- end package -->
+                
+            </div><!-- end col-md-6 -->
+            <div class="col-md-6">
+            
+            	<div class="package wow fadeInRight animated" data-wow-offset="250" data-wow-delay="500m" >
+                	<h5>Thursday</h5>
+                    <ul class="list-default">
+                    	<li>Dr. Michel Cube</li>
+                    	<li>adipiscing eliteger gravida velit quis dolo</li>
+                    	<li>Timing - 7:00 am	7:00 pm</li>
+                    </ul>
+                    <strong class="price"><small>Fee</small> $15</strong>
+                </div><!-- end package -->
+                
+                <div class="package wow fadeInRight animated" data-wow-offset="200" data-wow-delay="600m">
+                	<h5>Friday</h5>
+                    <ul class="list-default">
+                    	<li>Dr. Jonh Dow</li>
+                    	<li>adipiscing eliteger gravida velit quis dolo</li>
+                    	<li>Timing - 7:00 am	7:00 pm</li>
+                    </ul>
+                    <strong class="price"><small>Fee</small> $84</strong>
+                </div><!-- end package -->
+                
+                <div class="package no-border wow fadeInRight animated" data-wow-offset="150" data-wow-delay="700m">
+                	<h5>Saturday</h5>
+                    <ul class="list-default">
+                    	<li>Dr. Kristean</li>
+                    	<li>adipiscing eliteger gravida velit quis dolo</li>
+                    	<li>Timing - 7:00 am	7:00 pm</li>
+                    </ul>
+                    <strong class="price"><small>Fee</small> $95</strong>
+                </div><!-- end package -->
+                
+            </div><!-- end col-md-6 -->
+        </div><!-- end row -->    
+  </div>
+</section>
+<!-- package section --> 
+
+<!-- our team section -->
+<section id="teams" class="section teams">
+  <div class="container">
+      <div class="section-header">
+                <h2 class="wow fadeInDown animated">Doctors</h2>
+                <p class="wow fadeInDown animated">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa <br> semper aliquam quis mattis quam.</p>
+            </div>
+    <div class="row">
+      <div class="col-md-3 col-sm-6">
+        <div class="person"><img src="static/images/team-1.jpg" alt="" class="img-responsive">
+          <div class="person-content">
+            <h4>Dr. Jonh Dow</h4>
+            <h5 class="role">Founder</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit eget risus vitae massa.</p>
+          </div>
+          <ul class="social-icons clearfix">
+            <li><a href="#"><span class="fa fa-facebook"></span></a></li>
+            <li><a href="#"><span class="fa fa-twitter"></span></a></li> 
+            <li><a href="#"><span class="fa fa-google-plus"></span></a></li> 
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="person"> <img src="static/images/team-2.jpg" alt="" class="img-responsive">
+          <div class="person-content">
+            <h4>Dr. Markus Linn</h4>
+            <h5 class="role">Master</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit eget risus vitae massa.</p>
+          </div>
+          <ul class="social-icons clearfix">
+            <li><a href="#" class=""><span class="fa fa-facebook"></span></a></li>
+            <li><a href="#" class=""><span class="fa fa-twitter"></span></a></li> 
+            <li><a href="#" class=""><span class="fa fa-google-plus"></span></a></li> 
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="person"> <img src="static/images/team-3.jpg" alt="" class="img-responsive">
+          <div class="person-content">
+            <h4>Dr. Chris Jemes</h4>
+            <h5 class="role">Aerobic</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit eget risus vitae massa.</p>
+          </div>
+          <ul class="social-icons clearfix">
+            <li><a href="#" class=""><span class="fa fa-facebook"></span></a></li>
+            <li><a href="#" class=""><span class="fa fa-twitter"></span></a></li> 
+            <li><a href="#" class=""><span class="fa fa-google-plus"></span></a></li> 
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="person"> <img src="static/images/team-4.jpg" alt="" class="img-responsive">
+          <div class="person-content">
+            <h4>Dr. Vintes Mars</h4>
+            <h5 class="role">Marketing</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit eget risus vitae massa.</p>
+          </div>
+          <ul class="social-icons clearfix">
+            <li><a href="#" class=""><span class="fa fa-facebook"></span></a></li>
+            <li><a href="#" class=""><span class="fa fa-twitter"></span></a></li> 
+            <li><a href="#" class=""><span class="fa fa-google-plus"></span></a></li> 
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- our team section --> 
+<!-- Testimonials section -->
+<section id="testimonials" class="section testimonials no-padding">
+  <div class="container-fluid">
+    <div class="row no-gutter">
+      <div class="flexslider">
+        <ul class="slides">
+          <li>
+            <div class="col-md-12">
+              <blockquote>
+                <h1>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa 
+semper aliquam quis mattis consectetur adipiscing elit.." </h1>
+                <p>Chris Mentsl</p>
+              </blockquote>
+            </div>
+          </li>
+          <li>
+            <div class="col-md-12">
+              <blockquote>
+                <h1>"Praesent eget risus vitae massa Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa 
+semper aliquam quis mattis consectetur adipiscing elit.." </h1>
+                <p>Kristean velnly</p>
+              </blockquote>
+            </div>
+          </li>
+          <li>
+            <div class="col-md-12">
+              <blockquote>
+                <h1>"Consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa 
+semper aliquam quis mattis consectetur adipiscing elit.." </h1>
+                <p>Markus Denny</p>
+              </blockquote>
+            </div>
+          </li>
+          <li>
+            <div class="col-md-12">
+              <blockquote>
+                <h1>"Vitae massa semper aliquam Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa 
+semper aliquam quis mattis consectetur adipiscing elit.." </h1>
+                <p>John Doe</p>
+              </blockquote>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Testimonials section --> 
+
+<!-- contact section -->
+<section id="contact" class="section">
+  <div class="container">
+      <div class="section-header">
+                <h2 class="wow fadeInDown animated">Contact Us</h2>
+                <p class="wow fadeInDown animated">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa <br> semper aliquam quis mattis quam.</p>
+            </div>
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2 conForm">       
+        <div id="message"></div>
+        <form method="post" action="php/contact.php" name="cform" id="cform">
+          <input name="name" id="name" type="text" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" placeholder="Your name..." >
+          <input name="email" id="email" type="email" class=" col-xs-12 col-sm-12 col-md-12 col-lg-12 noMarr" placeholder="Email Address..." >
+          <textarea name="comments" id="comments" cols="" rows="" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" placeholder="Message..."></textarea>
+          <input type="submit" id="submit" name="send" class="submitBnt" value="Send">
+          <div id="simple-msg"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- contact section --> 
+<!-- JS FILES --> 
+<script src="static/js/jquery.min.js"></script> 
+<script src="static/js/bootstrap.min.js"></script> 
+<script src="static/js/jquery.flexslider-min.js"></script> 
+<script src="static/js/jquery.fancybox.pack.js"></script> 
+<script src="static/js/retina.min.js"></script> 
+<script src="static/js/modernizr.js"></script> 
+<script src="static/js/main.js"></script> 
+<script type="text/javascript" src="static/js/jquery.contact.js"></script> 
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <style>
+  /* loading */
+#sys-loading {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10000000;
+  background-color: hsla(0,0%,100%,.93);
+  opacity: 1
+}
+
+#sys-loading.finished {
+  opacity: 0
+}
+
+#sys-loading .spinner {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin: -30px auto auto -15px;
+  /*width: 200px;
+  height: 100px;*/
+  font-size: 10px
+}
+
+#sys-loading .spinner .rect2 {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s
+}
+
+#sys-loading .spinner .rect3 {
+  -webkit-animation-delay: -1s;
+  animation-delay: -1s
+}
+
+#sys-loading .spinner .rect4 {
+  -webkit-animation-delay: -.9s;
+  animation-delay: -.9s
+}
+
+#sys-loading .spinner .rect5 {
+  -webkit-animation-delay: -.8s;
+  animation-delay: -.8s
+}
+
+@-webkit-keyframes stretchdelay {
+  0%,40%,to {
+      -webkit-transform: scaleY(.6);
+      transform: scaleY(.6)
+  }
+
+  20% {
+      -webkit-transform: scaleY(1);
+      transform: scaleY(1)
+  }
+}
+
+@keyframes stretchdelay {
+  0%,40%,to {
+      transform: scaleY(.6);
+      -webkit-transform: scaleY(.6)
+  }
+
+  20% {
+      transform: scaleY(1);
+      -webkit-transform: scaleY(1)
+  }
+}
+
+@-webkit-keyframes finishanim {
+  0% {
+      opacity: 1
+  }
+
+  99% {
+      opacity: 0
+  }
+
+  to {
+      display: none
+  }
+}
+
+/* --------------- loading -1  ---------------------  */
+@-webkit-keyframes line-scale-pulse-out-rapid {
+0% {
+  -webkit-transform: scaley(1);
+          transform: scaley(1); }
+
+80% {
+  -webkit-transform: scaley(0.3);
+          transform: scaley(0.3); }
+
+90% {
+  -webkit-transform: scaley(1);
+          transform: scaley(1); } }
+
+@keyframes line-scale-pulse-out-rapid {
+0% {
+  -webkit-transform: scaley(1);
+          transform: scaley(1); }
+
+80% {
+  -webkit-transform: scaley(0.3);
+          transform: scaley(0.3); }
+
+90% {
+  -webkit-transform: scaley(1);
+          transform: scaley(1); } }
+
+.line-scale-pulse-out-rapid > div {
+background-color: #67CF22;
+width: 4px;
+height: 35px;
+border-radius: 2px;
+margin: 2px;
+-webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+display: inline-block;
+-webkit-animation: line-scale-pulse-out-rapid 0.9s 0s infinite cubic-bezier(.11, .49, .38, .78);
+        animation: line-scale-pulse-out-rapid 0.9s 0s infinite cubic-bezier(.11, .49, .38, .78); }
+.line-scale-pulse-out-rapid > div:nth-child(2), .line-scale-pulse-out-rapid > div:nth-child(4) {
+  -webkit-animation-delay: 0.25s !important;
+          animation-delay: 0.25s !important; }
+.line-scale-pulse-out-rapid > div:nth-child(1), .line-scale-pulse-out-rapid > div:nth-child(5) {
+  -webkit-animation-delay: 0.5s !important;
+          animation-delay: 0.5s !important; }
+
+
+          </style>
+
+<script>
+document.onreadystatechange = subSomething;
+function subSomething() {
+  //当页面加载状态
+  if (document.readyState == "complete") {
+      //延迟一秒关闭loading
+      $('#sys-loading').delay(100).hide(0);
+      $('.spinner').delay(1300).fadeOut('slow');
+  }
+}
+
+
+function display() {
+  //当页面加载状态
+      $('#sys-loading').delay(100).display(0);
+  
+}
+</script> 
+
+
+
+
+
+<style>
+  #loading { 
+    position:absolute; 
+    width:100px; 
+    height:30px; 
+    top:50%;
+    left:50%; 
+    margin: -25px -150px;
+    background-color:#FFFFFF;
+    border:1px solid #CCCCCC;
+    text-align:center;
+    padding:20px;
+  }
+  </style>
+
+  <a href="#" onclick="document.getElementById('loading').style.display='';">test</a>

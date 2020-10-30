@@ -1,1 +1,2 @@
 # Pattern_recognition_-practical_module
+Pattern_recognition_-practical_module

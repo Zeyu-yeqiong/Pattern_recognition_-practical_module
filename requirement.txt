@@ -1,0 +1,7 @@
+tensorflow==2.2.0
+pydicom=2.0.0
+seaborn==0.11.0
+efficientnet==1.1.1
+sklearn
+tensorflow-addons-0.11.2
+plotly-4.11.0
