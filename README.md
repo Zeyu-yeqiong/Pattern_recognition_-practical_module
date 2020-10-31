@@ -2,7 +2,7 @@
 
 ### Video Introduction
 
-pending..........
+https://drive.google.com/file/d/1fPBAyr71mgXWqtEx4sYrqMCnCx3lXo1F/view?usp=sharing
 
 ### Requirements
 
