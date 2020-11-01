@@ -34,6 +34,6 @@ Put it in to Pattern_recognition_-practical_module_group9/weights  folder.
 
 
 ### CV Part Training:
-For CV part, If you don't want to use our pretrain model, you can train your own model with  training.py
-Training dataset download: https://www.kaggle.com/c/osic-pulmonary-fibrosis-progression/data
+- For CV part, If you don't want to use our pretrain model, you can train your own model with  training.py
+- Training dataset download: https://www.kaggle.com/c/osic-pulmonary-fibrosis-progression/data
 
