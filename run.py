@@ -98,13 +98,12 @@ def upload():
         f.close()
 
         os.system("python run_model.py")
-        time.sleep(2)
 
         df=pd.read_csv("result.csv")
 
 
  
-        basepath = os.path.dirname(__file__)  # 当前文件所在路径
+        basepath = os.path.dirname(__file__) 
  
         series=[]
         for i in range(25):
