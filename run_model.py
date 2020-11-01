@@ -881,7 +881,7 @@ submission['Confidence'] = 285
 
 """And write the submission to file."""
 
-submission.to_csv('submission.csv', index=False)
+submission.to_csv('result.csv', index=False)
 
 submission.head()
 
@@ -950,5 +950,5 @@ for i in range(len(test.values)):
         df_final['FVC'][int(pos)] += pow((-FVC_pre + FVC),0.5)
         df_final['Confidence'][int(pos)] -= abs(pow((FVC_pre - FVC),0.7))
         
-df_final.to_csv('submission.csv', index=False)
+df_final.to_csv('result.csv', index=False)
 
