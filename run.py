@@ -110,7 +110,7 @@ def upload():
         for i in range(25):
             
 
-            P_week="temp_"+str((i-5))
+            P_week="temp_"+str((i-5)*2)
             print(P_week,"temp_"+str(week))
             if P_week=="temp_"+str(week):
                 FVC=fvc
