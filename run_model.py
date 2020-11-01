@@ -174,8 +174,7 @@ def build_model(shape=(512, 512, 1), model_class=None):
     x = Dense(1)(x)
     model = Model([inp, inp2] , x)
     
-    weights = [w for w in os.listdir('weights') if model_class in w][0]
-    model.load_weights('weights/' + weights)
+    model.load_weights('efficientnetb5-50epochs.h5')
     return model
 
 model_classes = ['b5'] #['b0','b1','b2','b3',b4','b5','b6','b7']
