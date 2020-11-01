@@ -99,9 +99,12 @@ def upload():
 
         os.system("python run_model.py")
 
-        df=pd.read_csv("result.csv")
-
-
+        
+        try:
+            df=pd.read_csv("result.csv")
+        except:
+            return jsonify({"error": 1001, "msg": "Please check your backend output and your python library version ",
+            "requirement library":"tensorflow==2.2.0 (!! important, larger or lower version will cause model crash. )pydicom=2.0.0   seaborn==0.11.0   efficientnet==1.1.1   sklearn  tensorflow-addons-0.11.2  plotly-4.11.0"})
  
         basepath = os.path.dirname(__file__) 
  
