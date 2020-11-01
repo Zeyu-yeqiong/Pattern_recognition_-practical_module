@@ -100,7 +100,7 @@ def upload():
         os.system("python run_model.py")
         time.sleep(2)
 
-        df=pd.read_csv("submission.csv")
+        df=pd.read_csv("result.csv")
 
 
  
