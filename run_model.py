@@ -50,7 +50,7 @@ session = tf.compat.v1.Session(config=config)
 
 [Back to Table of Contents](#0.1)
 """
-PATH="D:/dataset/project/osic-pulmonary-fibrosis-progression/"
+PATH="osic-pulmonary-fibrosis-progression/"
 Dropout_model = 0.385
 FVC_weight = 0.2
 Confidence_weight = 0.2
