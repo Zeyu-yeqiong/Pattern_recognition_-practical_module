@@ -32,3 +32,8 @@ Put it in to Pattern_recognition_-practical_module_group9/weights  folder.
 - Waiting for 3 - 15 mins, you can see progress in terminal output
 - Dispay output and our suggestion in FE 
 
+
+### CV Part Training:
+For CV part, If you don't want to use our pretrain model, you can train your own model with  training.py
+Training dataset download: https://www.kaggle.com/c/osic-pulmonary-fibrosis-progression/data
+
