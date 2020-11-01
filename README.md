@@ -7,7 +7,7 @@ https://drive.google.com/file/d/1fPBAyr71mgXWqtEx4sYrqMCnCx3lXo1F/view?usp=shari
 ### Requirements
 
 Please, install the following packages
-- tensorflow==2.2.0
+- tensorflow==2.2.0 (!!   important, larger or lower version will cause model crash. )
 - pydicom=2.0.0
 - seaborn==0.11.0
 - efficientnet==1.1.1
@@ -21,7 +21,7 @@ Please, install the following packages
 ### Model Checkpoint
 
 Download efficientnet B5 net weight from https://drive.google.com/file/d/1cygSFVtJ4kPPn3nZvJsTCsMyMc2np6UM/view?usp=sharing ,
-Put it in to Pattern_recognition_-practical_module_group9/weights  folder. 
+Put it in to root directory. 
 
 ### Guide
 - install all library, note tensorflow need 2.2.0 version
